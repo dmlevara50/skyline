@@ -1,0 +1,7 @@
+#services:
+#  oracle:
+#    image: 'oracle/database:19.3.0-ee'
+#    environment:
+#      - 'ORACLE_PASSWORD=dml26780'
+#    ports:
+#      - '1521'

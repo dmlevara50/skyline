@@ -1,0 +1,2 @@
+INSERT INTO SKYLINE.USERS (ID, NAME) VALUES (1, 'Daniel Martínez Leal');
+
