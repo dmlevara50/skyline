@@ -1,6 +1,6 @@
-package com.skyline.dao.interfaces;
+package com.skyline.dao.interfaces.oracle;
 
-import com.skyline.entity.UserEntity;
+import com.skyline.entity.oracle.UserEntity;
 
 import java.util.List;
 

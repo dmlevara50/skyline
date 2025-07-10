@@ -30,7 +30,7 @@ public class ProcesosJob implements BeanJob, Job {
     @Override
     public JobDetail executeJobDetail() {
         JobKey jobKey = new JobKey(ID_JOB_DETAIL, GROUP);
-        return JobBuilder.newJob(ProcesosJob.class).withIdentity(jobKey).build();
+        return JobBuilder.newJob(ProcesosJob.class).withIdentity(jobKey).storeDurably(false).build();
     }
 
     @Override

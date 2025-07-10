@@ -12,6 +12,6 @@
         <property name="show_sql">true</property>
 
         <!-- Mapping Entities -->
-        <mapping class="com.skyline.entity.UserEntity" />
+        <mapping class="com.skyline.entity.oracle.UserEntity" />
     </session-factory>
 </hibernate-configuration>

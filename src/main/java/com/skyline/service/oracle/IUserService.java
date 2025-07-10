@@ -1,4 +1,4 @@
-package com.skyline.service;
+package com.skyline.service.oracle;
 
 import com.skyline.dto.UserDTO;
 

@@ -35,7 +35,7 @@ public class ElasticSearchJob implements BeanJob, Job {
     @Override
     public JobDetail executeJobDetail() {
         JobKey jobKey = new JobKey(ID_JOB_DETAIL, GROUP);
-        return JobBuilder.newJob(ElasticSearchJob.class).withIdentity(jobKey).build();
+        return JobBuilder.newJob(ElasticSearchJob.class).withIdentity(jobKey).storeDurably(false).build();
     }
 
     @Override

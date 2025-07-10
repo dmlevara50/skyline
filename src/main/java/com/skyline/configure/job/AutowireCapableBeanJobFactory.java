@@ -1,4 +1,4 @@
-package com.skyline.configure;
+package com.skyline.configure.job;
 
 import com.skyline.jobs.BeanJob;
 import com.skyline.utils.SkylineUtils;
@@ -24,16 +24,21 @@ public class AutowireCapableBeanJobFactory extends SpringBeanJobFactory {
 
     @Bean
     public Scheduler scheduler(Scheduler scheduler) throws SchedulerException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-
         final List<Class<? extends Class<?>>> result = SkylineUtils.getAllInterfaces(BeanJob.class);
         Iterator<Class<? extends Class<?>>> iterator = result.iterator();
-        while (iterator.hasNext()){
-            Object bean = iterator.next().getDeclaredConstructor().newInstance();
-            BeanJob iBeanJob = (BeanJob) bean;
-            JobDetail job = iBeanJob.executeJobDetail();
-            Trigger trigger = iBeanJob.executeTrigger();
-            scheduler.scheduleJob(job, trigger);
-        }
+        scheduler.start();
+//        while (iterator.hasNext()){
+//            Object bean = iterator.next().getDeclaredConstructor().newInstance();
+//            BeanJob iBeanJob = (BeanJob) bean;
+//            JobDetail job = iBeanJob.executeJobDetail();
+//            Trigger trigger = iBeanJob.executeTrigger();
+//            if (scheduler.checkExists(job.getKey())){
+//                scheduler.deleteJob(job.getKey());
+//            }
+//            else {
+//                scheduler.scheduleJob(job, trigger);
+//            }
+//        }
         return scheduler;
     }
 }

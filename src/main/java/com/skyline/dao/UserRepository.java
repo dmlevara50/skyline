@@ -1,7 +1,7 @@
 package com.skyline.dao;
 
-import com.skyline.dao.interfaces.IUserRepository;
-import com.skyline.entity.UserEntity;
+import com.skyline.dao.interfaces.oracle.IUserRepository;
+import com.skyline.entity.oracle.UserEntity;
 import jakarta.annotation.Resource;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

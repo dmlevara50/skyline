@@ -1,4 +1,4 @@
-package com.skyline.entity;
+package com.skyline.entity.oracle;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

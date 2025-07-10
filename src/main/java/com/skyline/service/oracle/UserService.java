@@ -1,8 +1,8 @@
-package com.skyline.service;
+package com.skyline.service.oracle;
 
-import com.skyline.dao.interfaces.IUserRepository;
+import com.skyline.dao.interfaces.oracle.IUserRepository;
 import com.skyline.dto.UserDTO;
-import com.skyline.entity.UserEntity;
+import com.skyline.entity.oracle.UserEntity;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
