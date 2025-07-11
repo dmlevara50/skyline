@@ -1,14 +1,13 @@
 package com.skyline.dao.interfaces.oracle;
 
 import com.skyline.entity.oracle.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface IUserRepository {
+@Repository
+public interface IUserRepository extends JpaRepository<UserEntity, String> {
+    Optional<UserEntity> findAllByName(String name);
 
-    public void persist(UserEntity userEntity);
-
-    public List<UserEntity> find(UserEntity userEntity);
-
-    public List<UserEntity> find(String hql);
 }

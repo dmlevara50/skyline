@@ -8,19 +8,17 @@ import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Objects;
 
-@Entity(name = "USERS")
+
+@Entity(name = "ROL")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity {
+public class RolEntity {
 
     @Id
     @Column(name = "ID", nullable = false, insertable = true)
-    private Long idUserEntity;
+    private Long idRolEntity;
     private String name;
-    private String email;
-    private String pass;
-    private Long rol;
 
     @Override
     public final boolean equals(Object o) {
@@ -30,7 +28,7 @@ public class UserEntity {
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
         UserEntity user = (UserEntity) o;
-        return getIdUserEntity() != null && Objects.equals(getIdUserEntity(), user.getIdUserEntity());
+        return getIdRolEntity() != null && Objects.equals(getIdRolEntity(), user.getIdUserEntity());
     }
 
     @Override
